@@ -1,43 +1,50 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
 #links a {
-  color: #333;
+  color: $primary-color;
   background-color: grey;
   padding: 10px;
   margin-right: 10px;
 }
 
 .home-links a {
-  color: #333;
+  color: $primary-color;
   background-color: yellow;
   padding: 5px;
   margin: 10px;
 }
 
 #image {
+
   background-color: black;
   color: white;
   padding: 10px;
   margin: 10px;
-}
-#image img {
-  width: 100%;
-  height: auto;
-}
-#image p {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  p {
+    font: 100% $font-stack;
+    color: $primary-color;
+  }
 }
 
-#table p, #table tr, th, td {
+%shared-styling {
   border: 1px solid black;
   border-style: dotted;
   width: 500px;
 }
 
 #table tr, th, td {
-  font: Helvetica, sans-serif;
+  @extend %shared-styling;
+    font: $font-stack;
 }
 
 #table p {
+  @extend %shared-styling;
   background-color: black;
   color: white;
   display: inline-block;
@@ -50,7 +57,7 @@
 
 .col-sm {
   border: 1px solid black;
-  color: #333;
+  color: $primary-color;
 }
 
 @media only screen and (max-width: 600px) {
@@ -59,11 +66,10 @@
     font-size: 12px;
   }
 }
+
 @media only screen and (min-width: 1500px) {
   body {
     background-color: green;
     font-size: 25px;
   }
 }
-
-/*# sourceMappingURL=output.css.map */
