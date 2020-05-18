@@ -41,6 +41,16 @@
   display: inline-block;
 }
 
+.container {
+  background: grey;
+  border: 1px solid black;
+}
+
+.col-sm {
+  border: 1px solid black;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: red;
